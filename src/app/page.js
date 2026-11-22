@@ -6,6 +6,7 @@ import { mdfFeaturesData } from "@/data/mdfFeaturesData";
 import { hdhmrFeaturesData } from "@/data/hdhmrFeaturesData";
 import { mdfApplicationsData } from "@/data/mdfApplicationsData";
 import { hdhmrApplicationsData } from "@/data/hdhmrApplicationsData";
+import Compliances from "@/components/Compliances";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WudonProductApplications data={mdfApplicationsData} />
       <WudonProductFeatures data={hdhmrFeaturesData} reverse={true} />
       <WudonProductApplications data={hdhmrApplicationsData} />
+      <Compliances />
     </>
   );
 }

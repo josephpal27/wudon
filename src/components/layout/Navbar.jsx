@@ -123,6 +123,7 @@ const Navbar = () => {
                         <Button
                             label="Explore Altwood"
                             url="https://altwood.in"
+                            target="_blank"
                         />
                     </div>
 
@@ -173,6 +174,7 @@ const Navbar = () => {
                     <Button
                         label="Explore Altwood"
                         url="https://altwood.in"
+                        target="_blank"
                     />
                 </div>
             </div>

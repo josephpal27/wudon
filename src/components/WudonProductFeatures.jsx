@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
-import { headingVariant } from "@/utils/animations"
+import { headingVariant } from "@/utils/animations";
 import { GoArrowUpRight } from "react-icons/go";
 import GlareImage from "./ui/GlareImage";
 

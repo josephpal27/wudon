@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { useState } from 'react';
-import { headingVariant } from "@/utils/animations"
+import { headingVariant } from "@/utils/animations";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WudonProductApplications = ({ data }) => {

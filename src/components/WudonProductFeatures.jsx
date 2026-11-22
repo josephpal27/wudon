@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { headingVariant } from "@/utils/animations"
 import { GoArrowUpRight } from "react-icons/go";
-import GlareImage from "../GlareImage";
+import GlareImage from "./ui/GlareImage";
 
 const WudonProductFeatures = ({ data, reverse }) => {
     return (

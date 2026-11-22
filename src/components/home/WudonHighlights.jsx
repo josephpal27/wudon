@@ -1,4 +1,4 @@
-import GlareImage from "./ui/GlareImage";
+import GlareImage from "../ui/GlareImage";
 import { wudonHighlightsData } from "@/data/wudonHighlightsData";
 
 const WudonHighlights = () => {
@@ -7,7 +7,7 @@ const WudonHighlights = () => {
             <section className="
                 flex justify-between flex-wrap flex-col-reverse lg:flex-row
                 mt-[-2rem] lg:mt-[-1rem]
-            ">
+            " id="about">
 
                 {/* left */}
                 <div className="w-full lg:w-[47%]">

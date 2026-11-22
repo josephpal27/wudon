@@ -27,8 +27,8 @@ const Footer = () => {
         {
             title: "Our Collection",
             links: [
-                { label: "MDF", url: "/wudon" },
-                { label: "HDHMR", url: "/wudon" },
+                { label: "MDF", url: "/#mdf" },
+                { label: "HDHMR", url: "/#hdhmr" },
             ]
         },
         {
@@ -102,7 +102,7 @@ const Footer = () => {
                                             w-[35px] lg:w-[40px]
                                             h-[35px] lg:h-[40px]
                                             rounded-full text-white border border-gray-600 flex justify-center items-center
-                                            hover:bg-[#d7b36e] transition
+                                            hover:bg-[#29396e] transition
                                         ">
                                             {item.icon}
                                         </a>
@@ -135,7 +135,7 @@ const Footer = () => {
                                                             rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                                                             key={index}
                                                             className="
-                                                                flex items-center text-white hover:text-[#d7b36e] transition
+                                                                flex items-center text-white hover:text-[#ff656d] transition
                                                                 mb-[0.5rem] lg:mb-[1rem] 
                                                             "
                                                         >
@@ -143,7 +143,7 @@ const Footer = () => {
                                                         </a>
                                                     ) : (
                                                         <Link href={link.url} key={index} className="
-                                                            flex items-center text-white hover:text-[#d7b36e] transition
+                                                            flex items-center text-white hover:text-[#ff656d] transition
                                                             mb-[0.5rem] lg:mb-[1rem] 
                                                         ">
                                                             {link.label}

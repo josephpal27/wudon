@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { headingVariant } from "@/utils/animations";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
 
 const WudonBanner = () => {
     return (
@@ -32,7 +32,7 @@ const WudonBanner = () => {
                         Our brand is the result of visionary leadership, world-class manufacturing infrastructure, and a firm commitment to quality delivering engineered wood solutions that professionals across India trust and rely on.
                     </p>
                     <div className="mt-[1.7rem] lg:mt-[2rem]">
-                        <Button label="Explore Our Collection" url="/" />
+                        <Button label="Explore Our Collection" url="/#mdf" />
                     </div>
                 </div>
             </section>

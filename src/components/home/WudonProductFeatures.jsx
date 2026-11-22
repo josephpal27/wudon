@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import { headingVariant } from "@/utils/animations";
 import { GoArrowUpRight } from "react-icons/go";
-import GlareImage from "./ui/GlareImage";
+import GlareImage from "../ui/GlareImage";
 
-const WudonProductFeatures = ({ data, reverse }) => {
+const WudonProductFeatures = ({ data, reverse, id }) => {
     return (
         <>
-            <section>
+            <section id={id ? id : "features"}>
 
                 {/* Head */}
                 <div className="flex flex-col items-center">

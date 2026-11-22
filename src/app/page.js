@@ -1,21 +1,21 @@
-import WudonBanner from "@/components/WudonBanner";
-import WudonHighlights from "@/components/WudonHighlights";
-import WudonProductFeatures from "@/components/WudonProductFeatures";
-import WudonProductApplications from "@/components/WudonProductApplications";
+import WudonBanner from "@/components/home/WudonBanner";
+import WudonHighlights from "@/components/home/WudonHighlights";
+import WudonProductFeatures from "@/components/home/WudonProductFeatures";
+import WudonProductApplications from "@/components/home/WudonProductApplications";
+import Compliances from "@/components/home/Compliances";
 import { mdfFeaturesData } from "@/data/mdfFeaturesData";
 import { hdhmrFeaturesData } from "@/data/hdhmrFeaturesData";
 import { mdfApplicationsData } from "@/data/mdfApplicationsData";
 import { hdhmrApplicationsData } from "@/data/hdhmrApplicationsData";
-import Compliances from "@/components/Compliances";
 
 export default function Home() {
   return (
     <>
       <WudonBanner />
       <WudonHighlights />
-      <WudonProductFeatures data={mdfFeaturesData} />
+      <WudonProductFeatures data={mdfFeaturesData} id="mdf" />
       <WudonProductApplications data={mdfApplicationsData} />
-      <WudonProductFeatures data={hdhmrFeaturesData} reverse={true} />
+      <WudonProductFeatures data={hdhmrFeaturesData} id="hdhmr" reverse={true} />
       <WudonProductApplications data={hdhmrApplicationsData} />
       <Compliances />
     </>

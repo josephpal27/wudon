@@ -11,7 +11,7 @@ export default function NotFound() {
             <section className="h-[100dvh] flex flex-col justify-center items-center">
                 <h1 className="
                     text-[3rem] sm:text-[2.5rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4rem]
-                    text-[#7d4c0a] font-[600] tracking-[3]
+                    text-[#ad030c] font-[600] tracking-[3]
                 ">
                     404
                 </h1>
@@ -22,7 +22,7 @@ export default function NotFound() {
                     PAGE NOT FOUND
                 </p>
                 <Link href="/" className="
-                    bg-[#114a27] hover:bg-[#7d4c0a] text-[#fff] font-[500]
+                    bg-[#29396e] hover:bg-[#ad030c] text-[#fff] font-[500]
                     py-[0.4rem] px-[1rem] rounded-[6px] mt-[1rem] transition
                     text-[1rem] sm:text-[1rem] lg:text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem]
                 ">

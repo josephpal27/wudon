@@ -1,0 +1,56 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { headingVariant } from "@/utils/animations";
+import { contactData } from "@/data/contactData";
+
+const ContactDetails = () => {
+    return (
+        <div>
+            <div className="
+                border-[1px] border-gray-300 w-max rounded-full flex items-center gap-[0.5rem]
+                px-[1rem] sm:px-[1.1rem] lg:px-[0.9rem] xl:px-[1rem] 2xl:px-[1.1rem] 
+                py-[0.3rem] sm:py-[0.3rem] lg:py-[0.23rem] xl:py-[0.26rem] 2xl:py-[0.3rem]
+            ">
+                <span className="w-2 h-2 rounded-full bg-[#29396e] block" />
+                <span className="text-[0.9rem] sm:text-[1rem] lg:text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem] text-black font-[500]">
+                    Let's Connect
+                </span>
+            </div>
+            <motion.h2
+                variants={headingVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="mt-[1.5rem] sm:mt-[1.8rem] lg:mt-[1.6rem] xl:mt-[1.8rem] 2xl:mt-[2rem] lg:w-max"
+            >
+                Connect with Our Expert for <br className="hidden lg:block" /> Premium Plywoods
+            </motion.h2>
+            <p className="mt-[1rem] lg:mt-[1.5rem]">
+                Connect with our experienced specialists for premium plywood solutions designed to elevate every space.
+            </p>
+
+            <div className="mt-[2rem] sm:mt-[2.5rem] lg:mt-[2.6rem] xl:mt-[2.8rem] 2xl:mt-[3rem]">
+                {contactData.map((contact, index) => {
+                    return(
+                        <div key={index} className="flex gap-[0.7rem] lg:gap-[1rem] mb-[1.3rem] lg:mb-[1.5rem]">
+                            <div className="text-[1.7rem] sm:text-[1.9rem] lg:text-[1.7rem] xl:text-[1.8rem] 2xl:text-[2rem] text-[#ad030c]">
+                                {contact.icon}
+                            </div>
+                            <div>
+                                <span className="block font-bold text-[1.2rem] sm:text-[1.3rem] lg:text-[1rem] xl:text-[1.1rem] 2xl:text-[1.2rem] text-[#29396e]">
+                                    {contact.label}
+                                </span>
+                                <a href={contact.url} target={contact.target} className="block mt-[0.5rem] hover:text-[#ad030c]">
+                                    {contact.value}
+                                </a>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+    )
+}
+
+export default ContactDetails

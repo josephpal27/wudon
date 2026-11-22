@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { headingVariant } from "@/utils/animations";
-import GlareImage from "./ui/GlareImage";
+import GlareImage from "../ui/GlareImage";
 import { compliancesData } from "@/data/compliancesData";
 
 const Compliances = () => {
@@ -15,7 +15,7 @@ const Compliances = () => {
                         border-[1px] border-gray-300 w-max rounded-full flex items-center gap-[0.5rem]
                         px-[1rem] lg:px-[1.1rem] py-[0.3rem]
                     ">
-                        <span className="w-2 h-2 rounded-full bg-[#a87310] block" />
+                        <span className="w-2 h-2 rounded-full bg-[#29396e] block" />
                         <span className="text-[0.9rem] lg:text-[1rem] text-black font-[500]">Compliances</span>
                     </div>
                     <motion.h6

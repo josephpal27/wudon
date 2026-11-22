@@ -18,7 +18,7 @@ const Footer = () => {
         {
             title: "Quick Links",
             links: [
-                // { label: "Home", url: "/" },
+                { label: "Home", url: "/" },
                 { label: "About Us", url: "/#about" },
                 // { label: "Products", url: "/products" },
                 { label: "Contact Us", url: "/contact" },

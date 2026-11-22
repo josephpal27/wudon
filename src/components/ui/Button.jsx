@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
-const Button = ({ label, url, type = "button" }) => {
+const Button = ({ label, url, type = "button", target }) => {
 
   const classes = `bg-[#29396e] text-white w-max rounded-full flex items-center gap-[0.6rem] pl-[1rem] sm:pl-[1rem] lg:pl-[0.9rem] xl:pl-[1rem] 2xl:pl-[1.1rem] py-[0.4rem] sm:py-[0.5rem] lg:py-[0.4rem] xl:py-[0.45rem] 2xl:py-[0.5rem] pr-[0.5rem] sm:pr-[0.5rem] lg:pr-[0.4rem] xl:pr-[0.45rem] 2xl:pr-[0.5rem] text-[1rem] sm:text-[0.9rem] lg:text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem] font-medium hover:bg-[#ad030c] group transition duration-500`;
 
@@ -15,7 +15,7 @@ const Button = ({ label, url, type = "button" }) => {
   );
 
   return url
-    ? <Link href={url} className={classes}>{content}</Link>
+    ? <Link href={url} className={classes} target={target} rel={target === "_blank" ? "noopener noreferrer" : undefined}>{content}</Link>
     : <button type={type} className={classes}>{content}</button>
 }
 

@@ -1,37 +1,5 @@
-import GlareImage from "../GlareImage"
-
-const wudonHighlightsData = [
-    {
-        id: 1,
-        title: "HIGH DENSITY & <br/> STRENGTH",
-        desc: "Engineered for superior load-bearing capacity and long-term structural stability.",
-    },
-    {
-        id: 2,
-        title: "SMOOTH, UNIFORM <br/> SURFACE",
-        desc: "Ideal for painting, laminating, veneering, and premium finishes.",
-    },
-    {
-        id: 3,
-        title: "MOISTURE & SWELLING <br/> RESISTANCE",
-        desc: "HDHMR performs reliably in humid and moisture-prone environments.",
-    },
-    {
-        id: 4,
-        title: "TERMITE & FUNGUS <br/> RESISTANT",
-        desc: "Treated for protection against pests and microbial damage.",
-    },
-    {
-        id: 5,
-        title: "DIMENSIONAL <br/> STABILITY",
-        desc: "Resists warping, cracking, and deformation over time.",
-    },
-    {
-        id: 6,
-        title: "EXCELLENT <br/> WORKABILITY",
-        desc: "Easy to cut, shape, and CNC-route for detailed designs and precision work.",
-    },
-]
+import GlareImage from "./ui/GlareImage";
+import { wudonHighlightsData } from "@/data/wudonHighlightsData";
 
 const WudonHighlights = () => {
     return (
@@ -48,7 +16,7 @@ const WudonHighlights = () => {
                     </p>
                     <div className="mt-[1.5rem] lg:mt-[2rem]">
                         <GlareImage
-                            src="/images/wudon/highlight.avif"
+                            src="/images/highlight.avif"
                             alt="Wudon Highlight"
                             className="w-full rounded-md"
                         />

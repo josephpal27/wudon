@@ -135,7 +135,7 @@ const Footer = () => {
                                                             rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                                                             key={index}
                                                             className="
-                                                                flex items-center text-white hover:text-[#ff656d] transition
+                                                                flex items-center text-white hover:text-[#f34c55] transition
                                                                 mb-[0.5rem] lg:mb-[1rem] 
                                                             "
                                                         >
@@ -143,7 +143,7 @@ const Footer = () => {
                                                         </a>
                                                     ) : (
                                                         <Link href={link.url} key={index} className="
-                                                            flex items-center text-white hover:text-[#ff656d] transition
+                                                            flex items-center text-white hover:text-[#f34c55] transition
                                                             mb-[0.5rem] lg:mb-[1rem] 
                                                         ">
                                                             {link.label}

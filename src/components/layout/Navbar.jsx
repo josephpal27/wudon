@@ -64,7 +64,7 @@ const Navbar = () => {
         { name: "Home", href: "/" },
         { name: "About Us", href: "/#about" },
         { name: "Our Collection", href: "/#mdf" },
-        { name: "Contact Us", href: "/contact/" },
+        // { name: "Contact Us", href: "/contact/" },
     ];
 
     return (
@@ -121,9 +121,8 @@ const Navbar = () => {
                     {/* Right Button*/}
                     <div className="hidden md:block z-10">
                         <Button
-                            label="Explore Altwood"
-                            url="https://altwood.in"
-                            target="_blank"
+                            label="Get in Touch"
+                            url="/contact/"
                         />
                     </div>
 
@@ -172,9 +171,8 @@ const Navbar = () => {
 
                 <div className="p-[1rem] mt-[0.5rem] mt:mt-[1rem] w-max" onClick={() => setOpen(false)}>
                     <Button
-                        label="Explore Altwood"
-                        url="https://altwood.in"
-                        target="_blank"
+                        label="Get in Touch"
+                        url="/contact/"
                     />
                 </div>
             </div>

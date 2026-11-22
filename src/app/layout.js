@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
+import Footer from "@/components/layout/Footer";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 
 const inter = Inter({
   subsets: ["latin"],

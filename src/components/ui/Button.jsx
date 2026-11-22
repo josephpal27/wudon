@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 
 const Button = ({ label, url, type = "button" }) => {

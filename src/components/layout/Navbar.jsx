@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Button from "./Button";
+import Button from "../ui/Button";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);

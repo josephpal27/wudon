@@ -1,0 +1,210 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+
+const socialHandles = [
+    { icon: <FaFacebookF />, url: "#", },
+    { icon: <FaInstagram />, url: "#", },
+    { icon: <FaLinkedinIn />, url: "#", },
+]
+
+const Footer = () => {
+
+    const pathname = usePathname();
+    const isWudonPage = pathname === "/wudon" || pathname === "/wudon/";
+
+    const footContent = [
+        {
+            title: "Quick Links",
+            links: [
+                { label: "Home", url: "/" },
+                { label: "About Us", url: "/#our-story" },
+                { label: "Products", url: "/products" },
+                { label: "Contact Us", url: "/contact" },
+            ]
+        },
+        {
+            title: "Our Collection",
+            links: isWudonPage
+                ? [
+                    { label: "MDF", url: "/wudon" },
+                    { label: "HDHMR", url: "/wudon" },
+                ]
+                : [
+                    { label: "Film Faced", url: "/products/film-faced" },
+                    { label: "Marine Grade", url: "/products/marine-grade" },
+                    { label: "BWP Grade", url: "/products/bwp-grade" },
+                    { label: "BWR Grade", url: "/products/bwr-grade" },
+                    { label: "Flush Door", url: "/products/flush-door" },
+                    { label: "Block Board", url: "/products/block-board" },
+                ]
+        },
+        {
+            title: "Get In Touch",
+            links: [
+                {
+                    label: "46C, Jawaharlal Nehru Road, Everest House, 20th Floor, Suite-C, Kolkata 700071",
+                    url: "https://maps.app.goo.gl/SXiL9Eo13XArS6wr9",
+                    target: "_blank",
+                },
+                {
+                    label: isWudonPage ? "info@wudon.in" : "info@altwood.in",
+                    url: isWudonPage ? "mailto:info@wudon.in" : "mailto:info@altwood.in",
+                    target: "_self",
+                },
+                { label: "+91 98754 61678", url: "tel:+919875461678", target: "_self" },
+            ]
+        },
+    ]
+
+    return (
+        <>
+            <footer className="
+                bg-[url('/images/banners/black-bg-1.avif')] bg-cover bg-center relative overflow-hidden
+                mt-[1rem]
+                px-[1rem] sm:px-[7%]
+            ">
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[#272727] bg-opacity-80 w-full h-full"></div>
+
+                {/* Content */}
+                <div className="flex justify-between flex-wrap pt-[2rem] lg:pt-[5.5rem] relative">
+                    {/* Left */}
+                    <div className="w-full lg:w-[32%] rounded-md bg-[#313131] p-[1rem] lg:p-[2.5rem]">
+                        <div className="
+                            bg-white aspect-square rounded-full flex items-center justify-center
+                            w-[23%] px-[7px]
+                        ">
+                            <img
+                                src={
+                                    isWudonPage
+                                        ? "/images/logo/wudon-footer-logo.png"
+                                        : "/images/logo/altwood-logo.png"
+                                }
+                                alt="Logo"
+                                loading="lazy"
+                                className={`
+                                    w-full   
+                                    ${isWudonPage ? "p-[6px]" : ""} 
+                                `}
+                            />
+                        </div>
+                        <p className="
+                            text-[#ededed]
+                            text-[0.9rem] sm:text-[1rem] lg:text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem]
+                            mt-[1.1rem] lg:mt-[1.5rem]
+                        ">
+                            {
+                                isWudonPage
+                                    ?
+                                    "The brand behind spaces built to last a lifetime. Wudon brings together the best of technology and craftsmanship to deliver engineered wood products that are as reliable as they are refined."
+                                    :
+                                    "Behind every wall that’s never needed replacing, there’s a legacy passed into every layer and that legacy is Altwood."
+                            }
+                        </p>
+                        <div className="
+                            mt-[1.2rem] lg:mt-[2.5rem]
+                            pt-[1rem]
+                            border-t border-gray-600 
+                        ">
+                            <span className="
+                                text-white text-[1.2rem] sm:text-[1.3rem] lg:text-[1.1rem] xl:text-[1.2rem] 2xl:text-[1.3rem] font-[600] font-clash
+                            ">
+                                Follow Us on Social
+                            </span>
+                            <div className="
+                                flex
+                                gap-[1rem] lg:gap-[1.1rem]
+                                mt-[0.9rem] lg:mt-[1rem] 
+                            ">
+                                {socialHandles.map((item, index) => {
+                                    return (
+                                        <a href={item.url} target="_blank" key={index} className="
+                                            w-[35px] lg:w-[40px]
+                                            h-[35px] lg:h-[40px]
+                                            rounded-full text-white border border-gray-600 flex justify-center items-center
+                                            hover:bg-[#d7b36e] transition
+                                        ">
+                                            {item.icon}
+                                        </a>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    {/* Right */}
+                    <div className="w-full lg:w-[60%] mt-[1rem] lg:mt-0">
+                        <div className="flex justify-between flex-wrap">
+                            {footContent.map((item, index) => {
+                                return (
+                                    <div key={index} className="
+                                        w-full lg:w-[30%] 
+                                        first:w-full lg:first:w-[20%] 
+                                        last:w-full lg:last:w-[40%]
+                                        mt-[1.2rem] lg:mt-0
+                                    ">
+                                        <span className="
+                                            text-white text-[1.3rem] lg:text-[1.4rem] font-[600] font-clash
+                                        ">
+                                            {item.title}
+                                            <div className="mt-[1rem] lg:mt-[1.5rem]">
+                                                {item.links.map((link, index) => {
+                                                    return link.target ? (
+                                                        <a
+                                                            href={link.url}
+                                                            target={link.target}
+                                                            rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                                                            key={index}
+                                                            className="
+                                                                flex items-center text-white hover:text-[#d7b36e] transition
+                                                                mb-[0.5rem] lg:mb-[1rem] 
+                                                            "
+                                                        >
+                                                            {link.label}
+                                                        </a>
+                                                    ) : (
+                                                        <Link href={link.url} key={index} className="
+                                                            flex items-center text-white hover:text-[#d7b36e] transition
+                                                            mb-[0.5rem] lg:mb-[1rem] 
+                                                        ">
+                                                            {link.label}
+                                                        </Link>
+                                                    )
+                                                })}
+                                            </div>
+                                        </span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className="
+                            mt-[1rem] lg:mt-[1.5rem]
+                            pt-[1rem] lg:pt-[1.5rem]
+                            border-t border-gray-700 
+                        ">
+                            <p className="text-white text-[1rem] sm:text-[1.1rem] lg:text-[1rem] xl:text-[1.1rem] 2xl:text-[1.2rem] font-[500] font-clash">
+                                {isWudonPage ? "Precision Engineered Manufacturing" : "Premium Plywood Manufacturing"}
+                            </p>
+                        </div>
+                    </div>
+                </div >
+
+                {/* Copyright */}
+                <div className="
+                    mt-[1.1rem] lg:mt-[3rem]
+                    border-t border-gray-700 relative
+                    py-[1.5rem] lg:py-[2rem]
+                ">
+                    <p className="text-center text-white text-[0.8rem] sm:text-[0.9rem] lg:text-[0.8rem] xl:text-[0.9rem] 2xl:text-[1rem]">
+                        Copyright © {new Date().getFullYear()} | {isWudonPage ? "Wudon" : "Altwood"} | All Rights Reserved
+                    </p>
+                </div>
+
+            </footer >
+        </>
+    )
+}
+
+export default Footer
